@@ -10,7 +10,7 @@ const app = express();
 setInterval(() => {
     http.get("http://localhost:4000/api/products");
 }
-, 2000);
+, 3000);
 
 
 // Importing the routes
@@ -27,6 +27,8 @@ app.use(morgan("dev"));
 
 // routes
 app.use("/api/products", productsRoutes);
+app.use("/api/products/offers", productsRoutes);
+app.use("/api/products/category/:category", productsRoutes);
 
 
 // export default app so i can use it from my index file
