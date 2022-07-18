@@ -31,6 +31,7 @@ app.use(cors());
 app.use("/api/products", productsRoutes);
 app.use("/api/products/offers", productsRoutes);
 app.use("/api/products/category/:category", productsRoutes);
+app.use("/api/products/search/:name", productsRoutes);
 
 
 // export default app so i can use it from my index file
