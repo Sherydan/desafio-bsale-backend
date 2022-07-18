@@ -5,11 +5,11 @@ const cors = require('cors');
 const app = express();
 
 // import http from "http" so i can keep alive the connection
- const http = require("http");
+ const http = require("https");
 
  // ping api endpont every second
  setInterval(() => {
-    http.get("http://api-desafio-bsale.herokuapp.com:" + process.env.PORT +"/api/products");
+    https.get("https://api-desafio-bsale.herokuapp.com:" + process.env.PORT +"/api/products");
  }
  , 3000);
 
