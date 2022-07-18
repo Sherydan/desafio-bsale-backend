@@ -9,7 +9,7 @@ const app = express();
 
  // ping api endpont every second
  setInterval(() => {
-    http.get("http://localhost:5000/api/products");
+    http.get("http://api-desafio-bsale.herokuapp.com:" + process.env.PORT +"/api/products");
  }
  , 3000);
 
