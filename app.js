@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 
 // import http from "http" so i can keep alive the connection
- const http = require("https");
+ const https = require("https");
 
  // ping api endpont every second
  setInterval(() => {
