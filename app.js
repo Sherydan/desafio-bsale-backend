@@ -15,7 +15,7 @@ setInterval(() => {
 
 
 // Importing the routes
-import productsRoutes from "./src/routes/products.routes";
+import productsRoutes from "./src/routes/products.routes.js";
 
 
 // settings
