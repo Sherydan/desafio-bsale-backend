@@ -8,14 +8,14 @@ const app = express();
  const http = require("http");
 
  // ping api endpont every second
-setInterval(() => {
-    http.get("http://api-desafio-bsale.herokuapp.com:" + process.env.PORT + "/api/products");
-}
-, 3000);
+ setInterval(() => {
+    http.get("http://localhost:5000/api/products");
+ }
+ , 3000);
 
 
 // Importing the routes
-import productsRoutes from "./src/routes/products.routes.js";
+import productsRoutes from "./src/routes/products.routes";
 
 
 // settings
