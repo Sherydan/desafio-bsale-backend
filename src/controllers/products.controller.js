@@ -47,7 +47,7 @@ const getProductsByCategory = async(req, res) => {
 const getProductsByName = async(req, res) => {
     try {
         const connection = await getConnection();
-        const result = await connection.query("SELECT product.name FROM product WHERE product.name LIKE ?", [`%${req.params.name}%`]);
+        const result = await connection.query("SELECT product.name, product.url_image,  product.price, product.discount, product.category FROM product WHERE product.name LIKE ?", [`%${req.params.name}%`]);
         console.log(result);
         res.json(result);
     }
