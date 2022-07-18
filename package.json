@@ -29,10 +29,11 @@
     "express": "^4.18.1",
     "mysql": "^2.18.1",
     "ping": "^0.4.2",
-    "promise-mysql": "^5.2.0"
-  },
-  "devDependencies": {
+    "promise-mysql": "^5.2.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    
   }
 }
