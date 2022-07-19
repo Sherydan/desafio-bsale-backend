@@ -30,7 +30,7 @@ app.use(cors());
 // routes
 app.use("/api/products", productsRoutes);
 app.use("/api/products/offers", productsRoutes);
-app.use("/api/products/category/:category/order/:order", productsRoutes);
+app.use("/api/products/category/:category", productsRoutes);
 app.use("/api/products/search/:name", productsRoutes);
 
 
