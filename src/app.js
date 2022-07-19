@@ -24,7 +24,7 @@ app.set("port", process.env.PORT || 4000);
 
 // middlewares
 // we can use morgan to see the requests in the console
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 app.use(cors());
 
 // routes
