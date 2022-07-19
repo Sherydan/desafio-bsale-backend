@@ -29,11 +29,13 @@ const getOffers = async(req, res) => {
     
 }
 
+
+
 // get products by category
 const getProductsByCategory = async(req, res) => {
     try {
         const connection = await getConnection();
-        const result = await connection.query("SELECT product.name, product.url_image,  product.price, product.discount, product.category FROM product INNER JOIN category ON product.category = category.id WHERE category.id = ?", [req.params.category]);
+        const result = await connection.query("SELECT product.name, product.url_image,  product.price, product.discount, product.category FROM product INNER JOIN category ON product.category = category.id WHERE category.id = ? ORDER BY ? ASC", [req.params.category], [req.params.order]);
         console.log(result);
         res.json(result);
         
