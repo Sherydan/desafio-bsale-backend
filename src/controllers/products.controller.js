@@ -41,6 +41,7 @@ const getProductsByCategory = async(req, res) => {
         
     } catch (error) {
         res.status(500);
+        res.send([req.params.category, req.params.order]);
         res.send(error);
     }
     
