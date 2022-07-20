@@ -53,7 +53,7 @@ app.set("port", process.env.PORT || 4000);
 app.use(cors());
 
 // routes
-app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(swaggerJsdoc(swaggerSpec)));
+app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerJsdoc(swaggerSpec)));
 app.use("/api/products", productsRoutes);
 app.use("/api/products/offers", productsRoutes);
 app.use("/api/products/category/:category", productsRoutes);
