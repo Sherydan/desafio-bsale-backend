@@ -1,6 +1,6 @@
 import getConnection from "./../database/database";
 
-
+// get all products
 const getProducts = async(req, res) => {
     try {
         const connection = await getConnection();
@@ -15,6 +15,8 @@ const getProducts = async(req, res) => {
     
 }
 
+// get products in offer
+// gets only first 8 products ordered by DESC
 const getOffers = async(req, res) => {
     try {
         const connection = await getConnection();
@@ -32,6 +34,7 @@ const getOffers = async(req, res) => {
 
 
 // get products by category
+// receives the category id as a request parameter
 const getProductsByCategory = async(req, res) => {
     try {
         const connection = await getConnection();
@@ -46,6 +49,8 @@ const getProductsByCategory = async(req, res) => {
     
 }
 
+// get products by name
+// receives the product name as a request parameter 
 const getProductsByName = async(req, res) => {
     try {
         const connection = await getConnection();

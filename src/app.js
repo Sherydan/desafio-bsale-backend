@@ -1,6 +1,7 @@
 import express from "express";
 // import morgan from "morgan";
 const cors = require('cors');
+// needed to import path to pass it to swagger settings
 const path = require('path');
 
 const app = express();
@@ -8,6 +9,7 @@ const app = express();
 // swagger
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
+// swagger config
 const swaggerSpec = {
     definition: {
         openapi: '3.0.0',
@@ -30,7 +32,8 @@ const swaggerSpec = {
 // import http from "http" so i can keep alive the connection
  const http = require("http");
 
- // ping api endpont every second
+ // get request to /api/products endpoint to keep the connection alive
+ // this cost me hours of searching to figure out and i dont think this is the correct way to do it, but it works
 setInterval(() => {
     http.get("http://desafio-bsale-backend.herokuapp.com/api/products");
 }
@@ -41,7 +44,9 @@ setInterval(() => {
 import productsRoutes from "./routes/products.routes";
 
 
-// settings
+// port setting
+// IMPORTANT: when deployed to heroku, it takes a random port, not the one on the .env file
+// the random port issue is esasy to solve, we just need to "proccess.env.PORT" like we are using our own .env file
 app.set("port", process.env.PORT || 4000);
 
 
