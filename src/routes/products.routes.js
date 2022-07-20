@@ -28,7 +28,7 @@ const router = Router();
  *                  description: product discount
  *              category:
  *                  type: integer
- *                  description: category id 
+ *                  description: categorym id
  *  
  * 
  * 
