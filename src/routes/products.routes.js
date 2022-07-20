@@ -3,7 +3,6 @@ import { methods as productsController } from "./../controllers/products.control
 
 const router = Router();
 
-
 /**
  * @swagger
  * components:
@@ -29,7 +28,7 @@ const router = Router();
  *              category:
  *                  type: integer
  *                  description: categorym id
-  *      Category:
+ *      Category:
  *          type: object
  *          properties:
  *              id:
@@ -39,7 +38,6 @@ const router = Router();
  *                  type: string
  *                  description: category name
  */
-
 
 // get all products
 /**
@@ -57,8 +55,8 @@ const router = Router();
  *                          type: array
  *                          items:
  *                              $ref: '#components/schemas/Products'
- *          
- * 
+ *
+ *
  */
 router.get("/", productsController.getProducts);
 
@@ -78,8 +76,8 @@ router.get("/", productsController.getProducts);
  *                          type: array
  *                          items:
  *                              $ref: '#components/schemas/Products'
- *          
- * 
+ *
+ *
  */
 router.get("/offers", productsController.getOffers);
 
@@ -91,12 +89,11 @@ router.get("/offers", productsController.getOffers);
  *      summary: get all products by the given category id
  *      tags: [Products]
  *      parameters:
- *          - in: path
- *            name: id
- *            schema:
- *              type: integer
- *            required: true
- *            description: category id
+        - in: path
+          name: catId
+          schema:
+            type: integer
+          required: true
  *      responses:
  *          200:
  *              description: get all products by the given category id
