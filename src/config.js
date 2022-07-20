@@ -2,6 +2,7 @@ import {config} from "dotenv"
 
 config();
 
+// get environment variables from .env file
 export default {
     host: process.env.HOST || "",
     database: process.env.DATABASE || "",
