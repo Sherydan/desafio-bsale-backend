@@ -82,24 +82,7 @@ router.get("/", productsController.getProducts);
 router.get("/offers", productsController.getOffers);
 
 // get products by category id
-/**
- * @swagger
- * /api/products/category/{id}:
- *  get
- *     tags: [Products]
- *     summary: get products by category id
- *     parameters:
- *      - name: id
- *        in: path
- *        description: category id
- *        required: true
- *     responses:
- *      200:
- *        description: get product by given category
- */
 router.get("/category/:category", productsController.getProductsByCategory);
-
-
 router.get("/search/:name", productsController.getProductsByName);
 
 export default router;
