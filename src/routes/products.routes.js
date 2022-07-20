@@ -41,7 +41,25 @@ const router = Router();
  */
 
 
-
+// get all products
+/**
+ * @swagger
+ * /api/products:
+ *  get:
+ *      summary: return all products
+ *      tags: [Products]
+ *      responses:
+ *          200:
+ *              description: get all products
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          type: array
+ *                          items:
+ *                              $ref: '#components/schemas/Products'
+ *          
+ * 
+ */
 router.get("/", productsController.getProducts);
 router.get("/offers", productsController.getOffers);
 router.get("/category/:category", productsController.getProductsByCategory);
