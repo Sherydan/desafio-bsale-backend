@@ -10,19 +10,19 @@ const router = Router();
  *  schemas:
  *   Product:
  *    type: object
- *   properties:
- *      id:
- *      type: integer
- *      name:
- *          type: string
- *      url_image:
- *          type: string
- *      price:
- *          type: number
- *      discount:
- *          type: number
- *  category:
- *      type: integer
+ *      properties:
+ *          id:
+ *              type: integer
+ *          name:
+ *              type: string
+ *          url_image:
+ *              type: string
+ *          price:
+ *              type: number
+ *          discount:
+ *              type: number
+ *      category:
+ *          type: integer
  * 
  * 
  * 
