@@ -85,28 +85,21 @@ router.get("/offers", productsController.getOffers);
 /**
  * @swagger
  * /api/products/category/{id}:
- *  get:
- *      summary: get all products by given id
- *      tags: [Products]
- *      parameters:
- *          name: id
- *          schema:
- *              type: integer
- *          required: true
- *          description: category id
- *      responses:
- *          200:
- *              description: get all products by given id
- *              content:
- *                  application/json:
- *                      schema:
- *                          type: array
- *                          items:
- *                              $ref: '#components/schemas/Products'
- *
- *
+ *  get
+ *     tags: [Products]
+ *     summary: get products by category id
+ *     parameters:
+ *      - name: id
+ *        in: path
+ *        description: category id
+ *        required: true
+ *     responses:
+ *      200:
+ *        description: get product by given category
  */
 router.get("/category/:category", productsController.getProductsByCategory);
+
+
 router.get("/search/:name", productsController.getProductsByName);
 
 export default router;
