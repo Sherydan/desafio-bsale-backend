@@ -21,8 +21,8 @@ const router = Router();
  *              type: number
  *          discount:
  *              type: number
- *      category:
- *          type: integer
+ *          category:
+ *              type: integer
  * 
  * 
  * 
