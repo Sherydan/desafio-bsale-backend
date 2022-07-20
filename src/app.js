@@ -18,7 +18,7 @@ const swaggerSpec = {
         },
         servers: [
             {
-                url: 'https://desafio-bsale-backend.herokuapp.com/api-doc',
+                url: 'https://desafio-bsale-backend.herokuapp.com/',
                 description: 'Production'
             }
         ]
