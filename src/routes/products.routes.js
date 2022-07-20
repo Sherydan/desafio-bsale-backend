@@ -40,7 +40,7 @@ const router = Router();
  *                  description: category name
  */
 
-//get all products
+
 /**
  * @swagger
  * /api/products:
@@ -58,7 +58,7 @@ const router = Router();
  */
 router.get("/", productsController.getProducts);
 
-//get products offers
+
 /**
  * @swagger
  * /api/products/offers:
@@ -76,7 +76,7 @@ router.get("/", productsController.getProducts);
  */
 router.get("/offers", productsController.getOffers);
 
-//get products by category
+
 /**
  * @swagger
  * /api/products/category/{id}:
@@ -103,7 +103,7 @@ router.get("/offers", productsController.getOffers);
  */
 router.get("/category/:category", productsController.getProductsByCategory);
 
-//get products offers
+
 /**
  * @swagger
  * /api/products/search/{name}:
