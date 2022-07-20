@@ -61,6 +61,26 @@ const router = Router();
  * 
  */
 router.get("/", productsController.getProducts);
+
+// get all products in offer
+/**
+ * @swagger
+ * /api/products/offers:
+ *  get:
+ *      summary: return all products in offer
+ *      tags: [Products]
+ *      responses:
+ *          200:
+ *              description: get all products in offer
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          type: array
+ *                          items:
+ *                              $ref: '#components/schemas/Products'
+ *          
+ * 
+ */
 router.get("/offers", productsController.getOffers);
 router.get("/category/:category", productsController.getProductsByCategory);
 router.get("/search/:name", productsController.getProductsByName);
