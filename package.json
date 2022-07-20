@@ -1,0 +1,41 @@
+{
+  "name": "desafio-bsale-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/index.js -d dist",
+    "start": "babel-node src/index.js",
+    "babel-node": "babel-node --presets=@babel/preset-env",
+    "dev": "nodemon --exec npm run babel-node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sherydan/desafio-bsale-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sherydan/desafio-bsale-backend/issues"
+  },
+  "homepage": "https://github.com/Sherydan/desafio-bsale-backend#readme",
+  "dependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/node": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "ping": "^0.4.2",
+    "promise-mysql": "^5.2.0",
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.5.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19"
+  }
+}
