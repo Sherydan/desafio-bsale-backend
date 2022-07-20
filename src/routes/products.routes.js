@@ -8,21 +8,28 @@ const router = Router();
  * @swagger
  * components:
  *  schemas:
- *   Product:
- *    type: object
- *      properties:
- *          id:
- *              type: integer
- *          name:
- *              type: string
- *          url_image:
- *              type: string
- *          price:
- *              type: number
- *          discount:
- *              type: number
- *          category:
- *              type: integer
+ *      Products:
+ *          type: object
+ *          properties:
+ *              id:
+ *                  type: integer
+ *                  description: product unique id
+ *              name:
+ *                  type: string
+ *                  description: product name
+ *              url_image:
+ *                  type: string
+ *                  description: product image
+ *              price:
+ *                  type: number
+ *                  description: product price
+ *              discount:
+ *                  type: number
+ *                  description: product discount
+ *              category:
+ *                  type: integer
+ *                  description: category id 
+ *  
  * 
  * 
  * 
