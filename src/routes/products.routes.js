@@ -88,13 +88,6 @@ router.get("/offers", productsController.getOffers);
  *  get:
  *      summary: get all products by the given category id
  *      tags: [Products]
- *      parameters:
- *          -   in: path
- *              name: catId
- *              schema:
- *                  type: integer
- *              required: true
- *              description: category id
  *      responses:
  *          200:
  *              description: get all products by the given category id
