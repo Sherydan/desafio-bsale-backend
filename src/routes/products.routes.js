@@ -1,7 +1,6 @@
-import { Router } from "express";
-import { methods as productsController } from "./../controllers/products.controller";
-
-const router = Router();
+const express = require("express");
+const router = express.Router();
+const productsController = require("../controllers/productsController");
 
 /**
  * @swagger
@@ -58,7 +57,7 @@ const router = Router();
  *
  *
  */
-router.get("/", productsController.getProducts);
+router.get("/", productsController.getAllProducts);
 
 // get all products in offer
 /**
@@ -79,7 +78,7 @@ router.get("/", productsController.getProducts);
  *
  *
  */
-router.get("/offers", productsController.getOffers);
+router.get("/offers", productsController.getAllOffers);
 
 // get products by category id
 /**
@@ -112,7 +111,7 @@ router.get("/category/:category", productsController.getProductsByCategory);
  * @swagger
  * /api/products/search/{name}:
  *   get:
- *     summary: get products by given category id
+ *     summary: get products by given name
  *     tags: [Products]
  *     parameters:
  *       - in : path
@@ -133,4 +132,4 @@ router.get("/category/:category", productsController.getProductsByCategory);
  */
 router.get("/search/:name", productsController.getProductsByName);
 
-export default router;
+module.exports = router;
